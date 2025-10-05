@@ -1,0 +1,14 @@
+<div class="container mt-5">
+  <div class="card shadow-sm">
+    <div class="card-body">
+      <h1 class="card-title mb-4 text-center">✏️ Editar Receta</h1>
+
+      <%= render partial: "form", locals: { recipe: @recipe } %>
+
+      <div class="mt-4 text-center">
+        <%= link_to "← Volver", recipes_path, class: "btn btn-secondary me-2" %>
+        <%= link_to "Ver receta", recipe_path(@recipe), class: "btn btn-outline-primary" %>
+      </div>
+    </div>
+  </div>
+</div>

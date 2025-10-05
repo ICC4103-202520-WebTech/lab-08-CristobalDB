@@ -1,0 +1,28 @@
+<div class="container mt-5">
+  <div class="card shadow-sm">
+    <div class="card-body">
+      <h1 class="card-title mb-4 text-center"><%= @recipe.title %></h1>
+
+      <div class="row mb-3">
+        <div class="col-md-6">
+          <p><strong>⏱ Tiempo de cocción:</strong> <%= @recipe.cook_time %> min</p>
+        </div>
+        <div class="col-md-6">
+          <p><strong>🔥 Dificultad:</strong> <%= @recipe.difficulty %></p>
+        </div>
+      </div>
+
+      <div class="mt-4">
+        <h5 class="mb-3">📋 Instrucciones</h5>
+        <div class="border rounded p-3 bg-light">
+          <%= @recipe.instructions %>
+        </div>
+      </div>
+
+      <div class="mt-4 d-flex justify-content-between">
+        <%= link_to "← Volver", recipes_path, class: "btn btn-secondary" %>
+        <%= link_to "✏️ Editar", edit_recipe_path(@recipe), class: "btn btn-primary" %>
+      </div>
+    </div>
+  </div>
+</div>
